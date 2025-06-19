@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace DIP.Exercise1
 {
-    internal class FileLogger : ILogger
+    internal class ConsoleLogger : ILogger
     {
-        
-        public void Log(string message)
+        public void Log(string message) 
         {
-            Console.WriteLine($"File Logger: {message}");
+            Console.WriteLine($"Console Logger: {message}");
         }
     }
 }

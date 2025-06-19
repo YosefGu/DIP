@@ -8,11 +8,15 @@ namespace DIP.Exercise1
 {
     internal class MissionController
     {
-        public void RinMission()
+        public readonly ILogger _logger;
+        public MissionController(ILogger logger) 
         {
-            string mission1 = "Running mission 1";
-            FileLogger logger = new FileLogger();
-            logger.Log($"Mission complete: {mission1}");
+            _logger = logger;   
+        }
+        public void RunMission()
+        {
+            string mission = "Running mission";
+            _logger.Log($"Mission complete: {mission}");
         }
     }
 }
